@@ -1,0 +1,10 @@
+**/.DS_Store
+/.build/
+/build/
+/df.tar.bz2
+/docfixer.sh
+/DocumentArchive.tar
+/Package.resolved
+**/grhodes.xcuserdatad/
+/runlog.txt
+/.idea/shelf/

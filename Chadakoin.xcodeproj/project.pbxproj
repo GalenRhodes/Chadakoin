@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		831A2DB526A5CB7D0061E945 /* Chadakoin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831A2DAB26A5CB7D0061E945 /* Chadakoin.framework */; };
+		831A2DBA26A5CB7D0061E945 /* ChadakoinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A2DB926A5CB7D0061E945 /* ChadakoinTests.swift */; };
+		831A2DBC26A5CB7D0061E945 /* Chadakoin.h in Headers */ = {isa = PBXBuildFile; fileRef = 831A2DAE26A5CB7D0061E945 /* Chadakoin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		831A2DCA26A5CBEE0061E945 /* Rubicon in Frameworks */ = {isa = PBXBuildFile; productRef = 831A2DC926A5CBEE0061E945 /* Rubicon */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		831A2DB626A5CB7D0061E945 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 831A2DA226A5CB7D0061E945 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 831A2DAA26A5CB7D0061E945;
+			remoteInfo = Chadakoin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1117D35479404504F070DD8D /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
+		1117DB130E9ECCDBB2DCB81B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1117DDACD83C4CE2D9FEB797 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		1117DE321B42C0BFA4ED0AE4 /* .jazzy.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .jazzy.yaml; sourceTree = "<group>"; };
+		1117DEB918238F22762E7B65 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		831A2DAB26A5CB7D0061E945 /* Chadakoin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Chadakoin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		831A2DAE26A5CB7D0061E945 /* Chadakoin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Chadakoin.h; sourceTree = "<group>"; };
+		831A2DAF26A5CB7D0061E945 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		831A2DB426A5CB7D0061E945 /* ChadakoinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChadakoinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		831A2DB926A5CB7D0061E945 /* ChadakoinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChadakoinTests.swift; sourceTree = "<group>"; };
+		831A2DBB26A5CB7D0061E945 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		831A2DA826A5CB7D0061E945 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				831A2DCA26A5CBEE0061E945 /* Rubicon in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		831A2DB126A5CB7D0061E945 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				831A2DB526A5CB7D0061E945 /* Chadakoin.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		831A2DA126A5CB7D0061E945 = {
+			isa = PBXGroup;
+			children = (
+				831A2DC726A5CBB10061E945 /* Other */,
+				831A2DC526A5CB890061E945 /* Sources */,
+				831A2DC626A5CB950061E945 /* Tests */,
+				831A2DAC26A5CB7D0061E945 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		831A2DAC26A5CB7D0061E945 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				831A2DAB26A5CB7D0061E945 /* Chadakoin.framework */,
+				831A2DB426A5CB7D0061E945 /* ChadakoinTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		831A2DAD26A5CB7D0061E945 /* Chadakoin */ = {
+			isa = PBXGroup;
+			children = (
+				831A2DAE26A5CB7D0061E945 /* Chadakoin.h */,
+				831A2DAF26A5CB7D0061E945 /* Info.plist */,
+			);
+			path = Chadakoin;
+			sourceTree = "<group>";
+		};
+		831A2DB826A5CB7D0061E945 /* ChadakoinTests */ = {
+			isa = PBXGroup;
+			children = (
+				831A2DB926A5CB7D0061E945 /* ChadakoinTests.swift */,
+				831A2DBB26A5CB7D0061E945 /* Info.plist */,
+			);
+			path = ChadakoinTests;
+			sourceTree = "<group>";
+		};
+		831A2DC526A5CB890061E945 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				831A2DAD26A5CB7D0061E945 /* Chadakoin */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		831A2DC626A5CB950061E945 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				831A2DB826A5CB7D0061E945 /* ChadakoinTests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		831A2DC726A5CBB10061E945 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				1117DE321B42C0BFA4ED0AE4 /* .jazzy.yaml */,
+				1117DDACD83C4CE2D9FEB797 /* LICENSE */,
+				1117D35479404504F070DD8D /* .gitignore */,
+				1117DEB918238F22762E7B65 /* Package.swift */,
+				1117DB130E9ECCDBB2DCB81B /* README.md */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		831A2DA626A5CB7D0061E945 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				831A2DBC26A5CB7D0061E945 /* Chadakoin.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		831A2DAA26A5CB7D0061E945 /* Chadakoin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 831A2DBF26A5CB7D0061E945 /* Build configuration list for PBXNativeTarget "Chadakoin" */;
+			buildPhases = (
+				831A2DA626A5CB7D0061E945 /* Headers */,
+				831A2DA726A5CB7D0061E945 /* Sources */,
+				831A2DA826A5CB7D0061E945 /* Frameworks */,
+				831A2DA926A5CB7D0061E945 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chadakoin;
+			packageProductDependencies = (
+				831A2DC926A5CBEE0061E945 /* Rubicon */,
+			);
+			productName = Chadakoin;
+			productReference = 831A2DAB26A5CB7D0061E945 /* Chadakoin.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		831A2DB326A5CB7D0061E945 /* ChadakoinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 831A2DC226A5CB7D0061E945 /* Build configuration list for PBXNativeTarget "ChadakoinTests" */;
+			buildPhases = (
+				831A2DB026A5CB7D0061E945 /* Sources */,
+				831A2DB126A5CB7D0061E945 /* Frameworks */,
+				831A2DB226A5CB7D0061E945 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				831A2DB726A5CB7D0061E945 /* PBXTargetDependency */,
+			);
+			name = ChadakoinTests;
+			productName = ChadakoinTests;
+			productReference = 831A2DB426A5CB7D0061E945 /* ChadakoinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		831A2DA226A5CB7D0061E945 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					831A2DAA26A5CB7D0061E945 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					831A2DB326A5CB7D0061E945 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 831A2DA526A5CB7D0061E945 /* Build configuration list for PBXProject "Chadakoin" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 831A2DA126A5CB7D0061E945;
+			packageReferences = (
+				831A2DC826A5CBEE0061E945 /* XCRemoteSwiftPackageReference "Rubicon.git" */,
+				831A2DCB26A5CC130061E945 /* XCRemoteSwiftPackageReference "PGDocFixer.git" */,
+			);
+			productRefGroup = 831A2DAC26A5CB7D0061E945 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				831A2DAA26A5CB7D0061E945 /* Chadakoin */,
+				831A2DB326A5CB7D0061E945 /* ChadakoinTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		831A2DA926A5CB7D0061E945 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		831A2DB226A5CB7D0061E945 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		831A2DA726A5CB7D0061E945 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		831A2DB026A5CB7D0061E945 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				831A2DBA26A5CB7D0061E945 /* ChadakoinTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		831A2DB726A5CB7D0061E945 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 831A2DAA26A5CB7D0061E945 /* Chadakoin */;
+			targetProxy = 831A2DB626A5CB7D0061E945 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		831A2DBD26A5CB7D0061E945 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		831A2DBE26A5CB7D0061E945 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		831A2DC026A5CB7D0061E945 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Q5XWZ7S7E9;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sources/Chadakoin/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.projectgalen.Chadakoin;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		831A2DC126A5CB7D0061E945 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Q5XWZ7S7E9;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Sources/Chadakoin/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.projectgalen.Chadakoin;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		831A2DC326A5CB7D0061E945 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Q5XWZ7S7E9;
+				INFOPLIST_FILE = Tests/ChadakoinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.projectgalen.ChadakoinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		831A2DC426A5CB7D0061E945 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Q5XWZ7S7E9;
+				INFOPLIST_FILE = Tests/ChadakoinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.projectgalen.ChadakoinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		831A2DA526A5CB7D0061E945 /* Build configuration list for PBXProject "Chadakoin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				831A2DBD26A5CB7D0061E945 /* Debug */,
+				831A2DBE26A5CB7D0061E945 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		831A2DBF26A5CB7D0061E945 /* Build configuration list for PBXNativeTarget "Chadakoin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				831A2DC026A5CB7D0061E945 /* Debug */,
+				831A2DC126A5CB7D0061E945 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		831A2DC226A5CB7D0061E945 /* Build configuration list for PBXNativeTarget "ChadakoinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				831A2DC326A5CB7D0061E945 /* Debug */,
+				831A2DC426A5CB7D0061E945 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		831A2DC826A5CBEE0061E945 /* XCRemoteSwiftPackageReference "Rubicon.git" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GalenRhodes/Rubicon.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.2.54;
+			};
+		};
+		831A2DCB26A5CC130061E945 /* XCRemoteSwiftPackageReference "PGDocFixer.git" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GalenRhodes/PGDocFixer.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.11;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		831A2DC926A5CBEE0061E945 /* Rubicon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 831A2DC826A5CBEE0061E945 /* XCRemoteSwiftPackageReference "Rubicon.git" */;
+			productName = Rubicon;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 831A2DA226A5CB7D0061E945 /* Project object */;
+}
