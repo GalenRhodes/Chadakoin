@@ -20,6 +20,16 @@ import Rubicon
 
 extension InputStream {
 
+    /*==========================================================================================================*/
+    /// Create and return an InputStream that reads from a non-file URL.
+    /// 
+    /// - Parameters:
+    ///   - url: The URL. If the URL's scheme is "file" then a normal InputStream is created and returned.
+    ///   - options: The options for the remote URL InputStream.
+    ///   - authenticate: The closure that will be used to answer authentication challenges.
+    /// - Returns: A new InputStream that will read data from a remote URL such as a website or an FTP server.
+    /// - Throws: If an error occurs.
+    ///
     public static func getInputStream(url: URL, options: URLInputStreamOptions = [], authenticate: AuthenticationCallback? = nil) throws -> InputStream {
         if url.scheme == nil || url.scheme == "file" {
             guard let inputStream = InputStream(url: url) else { throw URLISErrors.General(description: "Unable to open URL: \"\(url.absoluteString)\"") }
@@ -32,10 +42,28 @@ extension InputStream {
 }
 
 extension Stream.PropertyKey {
+    /*==========================================================================================================*/
+    /// A key to get the mime-type from the input stream's properties.
+    ///
     public static let mimeTypeKey:         Stream.PropertyKey = Stream.PropertyKey("MIME-TYPE")
+    /*==========================================================================================================*/
+    /// A key to get the text encoding name, if any, from the input stream's properties.
+    ///
     public static let textEncodingNameKey: Stream.PropertyKey = Stream.PropertyKey("TEXT-ENCODING-NAME")
+    /*==========================================================================================================*/
+    /// A key to get the HTTP status code, if any, from the input stream's properties.
+    ///
     public static let httpStatusCodeKey:   Stream.PropertyKey = Stream.PropertyKey("HTTP-STATUS-CODE")
+    /*==========================================================================================================*/
+    /// A key to get the human readable HTTP status code, if any, from the input stream's properties.
+    ///
     public static let httpStatusTextKey:   Stream.PropertyKey = Stream.PropertyKey("HTTP-STATUS-TEXT")
+    /*==========================================================================================================*/
+    /// A key to get all of the HTTP headers, if any, from the input stream's properties.
+    ///
     public static let httpHeadersKey:      Stream.PropertyKey = Stream.PropertyKey("HTTP-HEADERS")
+    /*==========================================================================================================*/
+    /// A key to get all of the HTTP cookies, if any, from the input stream's properties.
+    ///
     public static let httpCookiesKey:      Stream.PropertyKey = Stream.PropertyKey("HTTP-COOKIES")
 }

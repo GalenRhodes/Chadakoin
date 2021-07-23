@@ -28,12 +28,11 @@ class ChadakoinTests: XCTestCase {
 
     func testResponseCodeMessage() throws {
         let codes: [ClosedRange<Int>] = [
-//            100 ... 101,
-//            200 ... 299,
-//            300 ... 307,
-//            400 ... 417,
-//            500 ... 505,
-            100 ... 599,
+            100 ... 101,
+            200 ... 299,
+            300 ... 307,
+            400 ... 417,
+            500 ... 505,
         ]
         for cr in codes {
             for c in cr {
@@ -47,29 +46,15 @@ class ChadakoinTests: XCTestCase {
 
         for strUrl in urls {
             do {
-                guard let url = URL(string: "https://www.w3.org/2001/XMLSchema.xsd") else { fatalError("Malformed URL.") }
+                guard let url = URL(string: strUrl) else { throw URLISErrors.General(description: "Malformed URL.") }
                 let inputStream = try InputStream.getInputStream(url: url)
-                guard let str = String(fromInputStream: inputStream, encoding: .utf8) else { fatalError("Could not read data.") }
+                guard let str = String(fromInputStream: inputStream, encoding: .utf8) else { throw StreamError.UnknownError(description: "Could not read data.") }
                 print(str)
             }
             catch let e {
                 XCTFail("\(e)")
             }
         }
-    }
-
-    func readData(_ inputStream: InputStream) throws -> Data {
-        var data: Data                        = Data()
-        let mx:   Int                         = (1024 * 1024)
-        let buff: UnsafeMutablePointer<UInt8> = UnsafeMutablePointer<UInt8>.allocate(capacity: mx)
-        defer { buff.deallocate() }
-        repeat {
-            let rc = inputStream.read(buff, maxLength: mx)
-            guard rc >= 0 else { throw inputStream.streamError ?? StreamError.UnknownError() }
-            guard rc > 0 else { break }
-            data.append(buff, count: rc)
-        } while true
-        return data
     }
 
 //    func testPerformanceExample() throws {

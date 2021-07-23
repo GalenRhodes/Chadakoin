@@ -1,0 +1,68 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/grhodes/Projects/2021/Chadakoin/Sources/Chadakoin/Extensions.swift",
+      "line": 22,
+      "symbol": "String.init(fromInputStream:encoding:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2021/Chadakoin/Sources/Chadakoin/Extensions.swift",
+      "line": 29,
+      "symbol": "Data.init(fromInputStream:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2021/Chadakoin/Sources/Chadakoin/URLISErrors.swift",
+      "line": 21,
+      "symbol": "URLISErrors",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2021/Chadakoin/Sources/Chadakoin/URLISErrors.swift",
+      "line": 22,
+      "symbol": "URLISErrors.General(description:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2021/Chadakoin/Sources/Chadakoin/URLISErrors.swift",
+      "line": 23,
+      "symbol": "URLISErrors.BadResponse(description:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2021/Chadakoin/Sources/Chadakoin/URLISErrors.swift",
+      "line": 24,
+      "symbol": "URLISErrors.RemoteHostError(description:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2021/Chadakoin/Sources/Chadakoin/URLISErrors.swift",
+      "line": 25,
+      "symbol": "URLISErrors.HTTPError(description:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2021/Chadakoin/Sources/Chadakoin/URLInputStreamOptions.swift",
+      "line": 21,
+      "symbol": "URLInputStreamOptionItem",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/grhodes/Projects/2021/Chadakoin/Sources/Chadakoin/URLInputStreamOptions.swift",
+      "line": 57,
+      "symbol": "URLInputStreamOptions",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/grhodes/Projects/2021/Chadakoin"
+}

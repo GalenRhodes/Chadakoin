@@ -18,12 +18,30 @@ import Foundation
 import CoreFoundation
 import Rubicon
 
+/*==============================================================================================================*/
+/// This enumeration represents the response to be returned from an authentication challenge callback.
+///
 public enum AuthenticationResponse {
+    /*==========================================================================================================*/
+    /// Return this to respond to the challenge with a username and password.
+    ///
     case Credentials(username: String, password: String)
+    /*==========================================================================================================*/
+    /// Return this to respond to the challenge using the default action.
+    ///
     case UseDefault
+    /*==========================================================================================================*/
+    /// Return this to cancel the challenge.
+    ///
     case Cancel
+    /*==========================================================================================================*/
+    /// Return this to reject the protection space and have the callback closure called with the next projection
+    /// space, if any.
+    ///
     case RejectProtectionSpace
 }
 
+/*==============================================================================================================*/
+/// The authentication callback closure type.
+///
 public typealias AuthenticationCallback = (URLProtectionSpace) -> AuthenticationResponse
-

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          Chadakoin©
+        </a>
+         (70% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/GalenRhodes/Chadakoin">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html"> Reference</a>
+      <img class="carat" src="img/carat.png" />
+        Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/AuthenticationResponse.html">AuthenticationResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/URLISErrors.html">URLISErrors</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/URLInputStreamOptionItem.html">URLInputStreamOptionItem</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/InputStream.html">InputStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Stream.html">Stream</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Stream/PropertyKey.html">– PropertyKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases/AuthenticationCallback.html">AuthenticationCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases/URLInputStreamOptions.html">URLInputStreamOptions</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            
+            <h1 id='chadakoin' class='heading'>CHADAKOIN</h1>
+
+<p>Chadakoin is a libaray to provide remote URL reading abilities to the InputStream class.  Currently the <a href="https://developer.apple.com/documentation/foundation/inputstream">InputStream</a> and <a href="https://developer.apple.com/documentation/foundation/filehandle">FileHandle</a> classes only read <a href="https://en.wikipedia.org/wiki/File_URI_scheme">file URLs (URLs that use the &ldquo;file://&rdquo; protocol)</a> but not other protocols such as &ldquo;http&rdquo;, &ldquo;https&rdquo;, and &ldquo;ftp&rdquo;.  For non-file URLs you have to use the <a href="https://developer.apple.com/documentation/foundation/url_loading_system">URL Loading System</a> which is a bit like killing house flies with an atom-bomb.  This library attempts to simplify that greatly.</p>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>Using this library is pretty simple. I&rsquo;ve create a new static factory method for the <a href="https://developer.apple.com/documentation/foundation/inputstream">InputStream</a> class to facilitate creating an instance of InputStream that reads from a URL.</p>
+<pre class="highlight swift"><code><span class="k">guard</span> <span class="k">let</span> <span class="nv">url</span> <span class="o">=</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://www.w3.org/2001/XMLSchema.xsd"</span><span class="p">)</span> <span class="k">else</span> <span class="p">{</span> <span class="nf">fatalError</span><span class="p">(</span><span class="s">"Malformed URL."</span><span class="p">)</span> <span class="p">}</span>
+<span class="k">let</span> <span class="nv">inputStream</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">InputStream</span><span class="o">.</span><span class="nf">getInputStream</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span>
+<span class="k">guard</span> <span class="k">let</span> <span class="nv">str</span> <span class="o">=</span> <span class="kt">String</span><span class="p">(</span><span class="nv">fromInputStream</span><span class="p">:</span> <span class="n">inputStream</span><span class="p">,</span> <span class="nv">encoding</span><span class="p">:</span> <span class="o">.</span><span class="n">utf8</span><span class="p">)</span> <span class="k">else</span> <span class="p">{</span> <span class="nf">fatalError</span><span class="p">(</span><span class="s">"Could not read data."</span><span class="p">)</span> <span class="p">}</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+</code></pre>
+<h3 id='options' class='heading'>Options</h3>
+
+<p>There are various options that can be specified:</p>
+
+<ul>
+<li><strong>NoCellularAccess</strong> - The connection will fail if the device is on a cellular network.  The default is allow connections on cellular networks.</li>
+<li><strong>NoConstrainedNetworkAccess</strong> - The connection will fail if the device is on a slow or constrained network.  The default is to allow connections on constrained networks.</li>
+<li><strong>NoExpensiveNetworkAccess</strong> - The connection will fail if the device is on a metered (pay-by-the-byte) network.  The default is to allow connections on metered networks.</li>
+<li><strong>NeverAcceptCookies</strong> - The connection will not receive cookies.  The default is to accept all cookies.</li>
+<li><strong>NeverAccept3rdPartyCookies</strong> - The connection will not receive 3<sup>rd</sup> party cookies.  The default is to accept all cookies.</li>
+<li><strong>IgnoreLocalCache</strong> - The connection will ignore any locally cached data.  The default is to use the default caching policy specified by the protocol.</li>
+<li><strong>IgnoreRemoteCache</strong> - The connection will ignore any remote cached data.  This setting also implies <strong><em>IgnoreLocalCache</em></strong>.  The default is to use the default caching policy specified by the protocol.</li>
+</ul>
+
+<p>To create an InputStream using options:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">inputStream</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">InputStream</span><span class="o">.</span><span class="nf">getInputStream</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="p">[</span> <span class="o">.</span><span class="kt">NoCellularAccess</span><span class="p">,</span> <span class="o">.</span><span class="kt">IgnoreLocalCache</span> <span class="p">])</span>
+</code></pre>
+<h3 id='stream-properties' class='heading'>Stream Properties</h3>
+
+<p>Several new <a href="https://developer.apple.com/documentation/foundation/stream/propertykey">Stream.PropertyKeys</a> have been added to support remote URLs. They include the following:</p>
+
+<ul>
+<li><strong>mimeTypeKey</strong> - Returns a <a href="https://developer.apple.com/documentation/swift/string">String</a> containing the MIME type returned by the remote host.</li>
+<li><strong>textEncodingNameKey</strong> - Returns a <a href="https://developer.apple.com/documentation/swift/string">String</a> containing the text encoding of the data or <em>nil</em> if the encoding is not known.</li>
+<li><strong>httpStatusCodeKey</strong> - If the URL was an HTTP/HTTPS request then this key returns a value of type <a href="https://developer.apple.com/documentation/swift/int">Int</a> containing the numeric response, such as 404, that was returned by the remote host or <em>nil</em> if the URL was not an HTTP/HTTPS request.</li>
+<li><strong>httpStatusTextKey</strong> - If the URL was an HTTP/HTTPS request then this key returns a value of type <a href="https://developer.apple.com/documentation/swift/string">String</a> containing the human readable response to the numeric response.  For example, if the numeric response was 404 then the human readable response will be &ldquo;not found&rdquo;. This key will return <em>nil</em> if the URL was not an HTTP/HTTPS request.</li>
+<li><strong>httpHeadersKey</strong> - If the URL was an HTTP/HTTPS request then this key returns a value of type <a href="https://developer.apple.com/documentation/swift/dictionary">[AnyHashable:Any]</a> that contains all of the headers returned by the remote host.  If the URL was not an HTTP/HTTPS request then the <a href="https://developer.apple.com/documentation/swift/dictionary">Dictionary</a> will be empty.</li>
+<li><strong>httpCookiesKey</strong> - If the URL was an HTTP/HTTPS request then this key returns a value of type <a href="https://developer.apple.com/documentation/swift/array">[HTTPCookie]</a>, where the values are of type <a href="https://developer.apple.com/documentation/foundation/httpcookie">HTTPCookie</a>, that contains all of the cookies, if any, returned by the remote host.  If the URL was not an HTTP/HTTPS request or the <strong><em>NeverAcceptCookies</em></strong> option was specified then the Array will always be empty.</li>
+</ul>
+<h3 id='authentication' class='heading'>Authentication</h3>
+
+<p>Simple authentication can be accomplished by providing a closure of type <code>(<a href="https://developer.apple.com/documentation/foundation/urlprotectionspace">URLProtectionSpace</a>) -&gt; AuthenticationResponse</code>. Authentication response is defined as:</p>
+<pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">AuthenticationResponse</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="kt">Credentials</span><span class="p">(</span><span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span>
+    <span class="k">case</span> <span class="kt">UseDefault</span>
+    <span class="k">case</span> <span class="kt">Cancel</span>
+    <span class="k">case</span> <span class="kt">RejectProtectionSpace</span>
+<span class="p">}</span>
+</code></pre>
+
+<ul>
+<li><strong>Credentials</strong> - Return this enum with the username and password to return to the remote host.</li>
+<li><strong>UseDefault</strong> - Return this enum to indicate that the protocols default handling of an Authentication Challenge should be used.</li>
+<li><strong>Cancel</strong> - Return this enum to cancel the request in response to an Authentication Challenge. The connection will fail.</li>
+<li><strong>RejectProtectionSpace</strong> - Return this enum to reject this challenge, and call the authentication closure again with the next authentication protection space.  This response is only appropriate in fairly unusual situations. For example, a Windows server might use both <a href="https://developer.apple.com/documentation/foundation/nsurlauthenticationmethodnegotiate">NSURLAuthenticationMethodNegotiate</a> and <a href="https://developer.apple.com/documentation/foundation/nsurlauthenticationmethodntlm">NSURLAuthenticationMethodNTLM</a>. If your app can only handle NTLM, you would want to reject the Negotiate challenge, in order to then receive the queued NTLM challenge.</li>
+</ul>
+<h2 id='api-documentation' class='heading'>API Documentation</h2>
+
+<p>Documentation of the API can be found here: <a href="http://galenrhodes.com/Chadakoin/">Chadakoin API</a></p>
+<h2 id='why-the-name-chadakoin' class='heading'>Why the name Chadakoin?</h2>
+
+<p>Borrowing from the concept of being able to read from a stream, the <a href="https://en.wikipedia.org/wiki/Chadakoin_River">Chadakoin is a river</a> in Western New York which drains <a href="https://en.wikipedia.org/wiki/Chautauqua_Lake">Chautauqua Lake</a>, eventually, into the Gulf of Mexico.  See <a href="https://en.wikipedia.org/wiki/Chadakoin_River">Chadakoin River</a></p>
+
+<p><a href="LICENSE">Copyright © 2021 Galen Rhodes. All rights reserved.</a></p>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2021 <a class="link" href="https://blog.projectgalen.com" target="_blank" rel="external">Galen Rhodes</a>. All rights reserved. (Last updated: 2021-07-23)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

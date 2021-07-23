@@ -19,12 +19,38 @@ import CoreFoundation
 import Rubicon
 
 public enum URLInputStreamOptionItem: Hashable, CaseIterable {
+    /*==========================================================================================================*/
+    /// The connection will fail if the device is on a cellular network. The default is allow connections on
+    /// cellular networks.
+    ///
     case NoCellularAccess
+    /*==========================================================================================================*/
+    /// The connection will fail if the device is on a slow or constrained network. The default is to allow
+    /// connections on constrained networks.
+    ///
     case NoConstrainedNetworkAccess
+    /*==========================================================================================================*/
+    /// The connection will fail if the device is on a metered (pay-by-the-byte) network. The default is to allow
+    /// connections on metered networks.
+    ///
     case NoExpensiveNetworkAccess
+    /*==========================================================================================================*/
+    /// The connection will not receive cookies. The default is to accept all cookies.
+    ///
     case NeverAcceptCookies
+    /*==========================================================================================================*/
+    /// The connection will not receive 3rd party cookies. The default is to accept all cookies.
+    ///
     case NeverAccept3rdPartyCookies
+    /*==========================================================================================================*/
+    /// The connection will ignore any locally cached data. The default is to use the default caching policy
+    /// specified by the protocol.
+    ///
     case IgnoreLocalCache
+    /*==========================================================================================================*/
+    /// The connection will ignore any remote cached data. This setting also implies **IgnoreLocalCache**. The
+    /// default is to use the default caching policy specified by the protocol.
+    ///
     case IgnoreRemoteCache
 }
 
