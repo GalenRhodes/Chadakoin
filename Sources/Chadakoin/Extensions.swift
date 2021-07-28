@@ -16,7 +16,6 @@
 
 import Foundation
 import CoreFoundation
-import Rubicon
 
 extension String {
     @inlinable public init?(fromInputStream inputStream: InputStream, encoding: String.Encoding = .utf8) {
@@ -30,4 +29,33 @@ extension Data {
         defer { inputStream.close() }
         self.init(inputStream: inputStream)
     }
+}
+
+extension Thread {
+    public convenience init(qualityOfService: QualityOfService, block: @escaping () -> Void) {
+        self.init(block: block)
+        self.qualityOfService = qualityOfService
+    }
+}
+
+extension NSCondition {
+
+    @inlinable @discardableResult public func withLock<T>(_ body: () throws -> T) rethrows -> T {
+        lock()
+        defer {
+            broadcast()
+            unlock()
+        }
+        return try body()
+    }
+
+    @inlinable public func broadcastWait() {
+        broadcast()
+        wait()
+    }
+    @inlinable public func broadcastWait(until when: Date) -> Bool {
+        broadcast()
+        return wait(until: when)
+    }
+
 }

@@ -16,7 +16,6 @@
 
 import Foundation
 import CoreFoundation
-import Rubicon
 
 /*==============================================================================================================*/
 /// This enumeration represents the response to be returned from an authentication challenge callback.

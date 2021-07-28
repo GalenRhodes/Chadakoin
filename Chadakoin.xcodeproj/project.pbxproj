@@ -13,12 +13,13 @@
 		1117D74B46CCF81C6CC0DF30 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117D64A07A93EAFBB5D372C /* Extensions.swift */; };
 		1117DA210E792A0E7D7D4086 /* URLInputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117D93C386BA341584F89F6 /* URLInputStream.swift */; };
 		1117DA3BCB287A6E11DAF8D1 /* URLISErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117D37EA9C53D21FEB4A205 /* URLISErrors.swift */; };
+		1117DA9196668B7D48880E37 /* StreamError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117DF27995D2344105DC295 /* StreamError.swift */; };
 		1117DC3D588E5A818F8BBB6E /* URLInputStreamOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117D3C59D901DC55C4988F7 /* URLInputStreamOptions.swift */; };
 		1117DD98C812B2111D0F519A /* InputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117DA0B05AFA775D8655223 /* InputStream.swift */; };
 		1117DDBDA30C904A4959508B /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117D06A66798EAA099E9583 /* Authentication.swift */; };
+		1117DFBBF7D8F19364A3DB99 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117D3AE84CA8C90EDA678E4 /* Tools.swift */; };
 		831A2DB526A5CB7D0061E945 /* Chadakoin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831A2DAB26A5CB7D0061E945 /* Chadakoin.framework */; };
 		831A2DBA26A5CB7D0061E945 /* ChadakoinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831A2DB926A5CB7D0061E945 /* ChadakoinTests.swift */; };
-		831A2DCA26A5CBEE0061E945 /* Rubicon in Frameworks */ = {isa = PBXBuildFile; productRef = 831A2DC926A5CBEE0061E945 /* Rubicon */; };
 		83CD902526AAE8A200EC0533 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CD902426AAE8A200EC0533 /* main.swift */; };
 		83CD902C26AAE8C600EC0533 /* PGDocFixer in Frameworks */ = {isa = PBXBuildFile; productRef = 83CD902B26AAE8C600EC0533 /* PGDocFixer */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 		1117D06A66798EAA099E9583 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		1117D35479404504F070DD8D /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		1117D37EA9C53D21FEB4A205 /* URLISErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLISErrors.swift; sourceTree = "<group>"; };
+		1117D3AE84CA8C90EDA678E4 /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		1117D3C59D901DC55C4988F7 /* URLInputStreamOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLInputStreamOptions.swift; sourceTree = "<group>"; };
 		1117D6434F282A1E2EBAA9C9 /* Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
 		1117D64A07A93EAFBB5D372C /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		1117DE321B42C0BFA4ED0AE4 /* .jazzy.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .jazzy.yaml; sourceTree = "<group>"; };
 		1117DE6DFE9F30A0A61EEC65 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		1117DEB918238F22762E7B65 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		1117DF27995D2344105DC295 /* StreamError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamError.swift; sourceTree = "<group>"; };
 		831A2DAB26A5CB7D0061E945 /* Chadakoin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Chadakoin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		831A2DB426A5CB7D0061E945 /* ChadakoinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChadakoinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		831A2DB926A5CB7D0061E945 /* ChadakoinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChadakoinTests.swift; sourceTree = "<group>"; };
@@ -92,7 +95,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				831A2DCA26A5CBEE0061E945 /* Rubicon in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +167,8 @@
 				1117DBF22433F3E8E1923687 /* URLInputStreamExt.swift */,
 				1117D06A66798EAA099E9583 /* Authentication.swift */,
 				1117D64A07A93EAFBB5D372C /* Extensions.swift */,
+				1117D3AE84CA8C90EDA678E4 /* Tools.swift */,
+				1117DF27995D2344105DC295 /* StreamError.swift */,
 			);
 			path = Chadakoin;
 			sourceTree = "<group>";
@@ -252,7 +256,6 @@
 			);
 			name = Chadakoin;
 			packageProductDependencies = (
-				831A2DC926A5CBEE0061E945 /* Rubicon */,
 			);
 			productName = Chadakoin;
 			productReference = 831A2DAB26A5CB7D0061E945 /* Chadakoin.framework */;
@@ -328,7 +331,6 @@
 			);
 			mainGroup = 831A2DA126A5CB7D0061E945;
 			packageReferences = (
-				831A2DC826A5CBEE0061E945 /* XCRemoteSwiftPackageReference "Rubicon" */,
 				831A2DCB26A5CC130061E945 /* XCRemoteSwiftPackageReference "PGDocFixer" */,
 			);
 			productRefGroup = 831A2DAC26A5CB7D0061E945 /* Products */;
@@ -372,6 +374,8 @@
 				1117D345D687845D84AB1423 /* URLInputStreamExt.swift in Sources */,
 				1117DDBDA30C904A4959508B /* Authentication.swift in Sources */,
 				1117D74B46CCF81C6CC0DF30 /* Extensions.swift in Sources */,
+				1117DFBBF7D8F19364A3DB99 /* Tools.swift in Sources */,
+				1117DA9196668B7D48880E37 /* StreamError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,14 +682,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		831A2DC826A5CBEE0061E945 /* XCRemoteSwiftPackageReference "Rubicon" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/GalenRhodes/Rubicon.git";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 0.2.54;
-			};
-		};
 		831A2DCB26A5CC130061E945 /* XCRemoteSwiftPackageReference "PGDocFixer" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/GalenRhodes/PGDocFixer.git";
@@ -697,11 +693,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		831A2DC926A5CBEE0061E945 /* Rubicon */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 831A2DC826A5CBEE0061E945 /* XCRemoteSwiftPackageReference "Rubicon" */;
-			productName = Rubicon;
-		};
 		83CD902B26AAE8C600EC0533 /* PGDocFixer */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 831A2DCB26A5CC130061E945 /* XCRemoteSwiftPackageReference "PGDocFixer" */;

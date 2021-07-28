@@ -1,9 +1,9 @@
 /*****************************************************************************************************************************//**
  *     PROJECT: Chadakoin
- *    FILENAME: URLISErrors.swift
+ *    FILENAME: StreamError.swift
  *         IDE: AppCode
  *      AUTHOR: Galen Rhodes
- *        DATE: July 19, 2021
+ *        DATE: July 28, 2021
  *
   * Permission to use, copy, modify, and distribute this software for any purpose with or without fee is hereby granted, provided
  * that the above copyright notice and this permission notice appear in all copies.
@@ -16,10 +16,8 @@
 
 import Foundation
 import CoreFoundation
+import Rubicon
 
-public enum URLISErrors: Error {
-    case General(description: String)
-    case BadResponse(description: String)
-    case RemoteHostError(description: String)
-    case HTTPError(description: String)
+enum StreamError: Error {
+    case UnknownError(description: String = "Unknown I/O Error.")
 }

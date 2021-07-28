@@ -16,7 +16,6 @@
 
 import Foundation
 import CoreFoundation
-import Rubicon
 
 let BUFFER_SIZE: Int = (1024 * 1024)
 
@@ -27,14 +26,14 @@ class URLInputStream: InputStream {
     var inputStream:  InputStream?                = nil
     var properties:   [Stream.PropertyKey: Any]   = [:]
     var authenticate: AuthenticationCallback      = { _ in .UseDefault }
-    let lock:         Conditional                 = Conditional()
+    let lock:         NSCondition                 = NSCondition()
     var bytes:        UnsafeMutablePointer<UInt8> = UnsafeMutablePointer<UInt8>.allocate(capacity: BUFFER_SIZE)
     var byteCount:    Int                         = 0
     let config:       URLSessionConfiguration
     let url:          URL
 
     lazy var session: URLSession = URLSession(configuration: config, delegate: ChadakoinDelegate(self), delegateQueue: nil)
-    lazy var thread:  PGThread   = PGThread(qualityOfService: .userInitiated) { [weak self] in while let o = self { guard o.threadGood && o.doBackground() else { break } } }
+    lazy var thread:  Thread   = Thread(qualityOfService: .userInitiated) { [weak self] in while let o = self { guard o.threadGood && o.doBackground() else { break } } }
 
     override var streamStatus:      Stream.Status { lock.withLock { (hasError ? .error : status)                                            } }
     override var streamError:       Error?        { lock.withLock { (hasError ? error : nil)                                                } }

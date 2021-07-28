@@ -16,7 +16,6 @@
 
 import Foundation
 import CoreFoundation
-import Rubicon
 
 extension URLInputStream {
     //@f:0

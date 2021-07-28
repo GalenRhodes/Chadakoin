@@ -1,9 +1,9 @@
 /*****************************************************************************************************************************//**
  *     PROJECT: Chadakoin
- *    FILENAME: URLISErrors.swift
+ *    FILENAME: Tools.swift
  *         IDE: AppCode
  *      AUTHOR: Galen Rhodes
- *        DATE: July 19, 2021
+ *        DATE: July 28, 2021
  *
   * Permission to use, copy, modify, and distribute this software for any purpose with or without fee is hereby granted, provided
  * that the above copyright notice and this permission notice appear in all copies.
@@ -17,9 +17,18 @@
 import Foundation
 import CoreFoundation
 
-public enum URLISErrors: Error {
-    case General(description: String)
-    case BadResponse(description: String)
-    case RemoteHostError(description: String)
-    case HTTPError(description: String)
+@inlinable func value<T>(_ v: T, isOneOf: T...) -> Bool where T: Equatable {
+    isOneOf.first(where: { $0 == v }) != nil
+}
+
+@inlinable func value<T>(_ v: T, isOneOf: T...) -> Bool where T: AnyObject {
+    isOneOf.first(where: { $0 === v }) != nil
+}
+
+@inlinable func value<T>(_ v: T, isOneOf: [T]) -> Bool where T: Equatable {
+    isOneOf.first(where: { $0 == v }) != nil
+}
+
+@inlinable func value<T>(_ v: T, isOneOf: [T]) -> Bool where T: AnyObject {
+    isOneOf.first(where: { $0 === v }) != nil
 }

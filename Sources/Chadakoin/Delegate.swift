@@ -16,7 +16,6 @@
 
 import Foundation
 import CoreFoundation
-import Rubicon
 
 class ChadakoinDelegate: NSObject, URLSessionStreamDelegate, URLSessionDataDelegate {
     weak var stream: URLInputStream?
@@ -37,7 +36,7 @@ class ChadakoinDelegate: NSObject, URLSessionStreamDelegate, URLSessionDataDeleg
     func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive response: URLResponse, completionHandler handler: @escaping (URLSession.ResponseDisposition) -> Void) {
         guard let stream = stream else { return }
         stream.lock.withLock { () -> Void in
-            if let scheme = stream.url.scheme, Rubicon.value(scheme, isOneOf: "http", "https") {
+            if let scheme = stream.url.scheme, Chadakoin.value(scheme, isOneOf: "http", "https") {
                 guard let response = (response as? HTTPURLResponse) else {
                     stream.error = URLISErrors.BadResponse(description: "The response returned was not the correct type.")
                     handler(.cancel)
