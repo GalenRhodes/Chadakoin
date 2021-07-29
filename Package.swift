@@ -10,7 +10,7 @@ let package = Package(
     products: [ .library(name: "Chadakoin", targets: [ "Chadakoin", ]), ],
     dependencies: [],
     targets: [
-        .target(name: "Chadakoin", dependencies: [ "Rubicon", ], exclude: [ "Info.plist", ]),
+        .target(name: "Chadakoin", dependencies: [], exclude: [ "Info.plist", ]),
         .testTarget(name: "ChadakoinTests", dependencies: [ "Chadakoin", ], exclude: [ "Info.plist", ]),
     ]
 )
