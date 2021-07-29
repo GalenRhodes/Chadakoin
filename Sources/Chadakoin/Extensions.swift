@@ -19,15 +19,25 @@ import CoreFoundation
 
 extension String {
     @inlinable public init?(fromInputStream inputStream: InputStream, encoding: String.Encoding = .utf8) {
-        defer { inputStream.close() }
-        self.init(inputStream: inputStream, encoding: encoding)
+        guard let data = Data(fromInputStream: inputStream) else { return nil }
+        self.init(data: data, encoding: encoding)
     }
 }
 
 extension Data {
-    @inlinable public init?(fromInputStream inputStream: InputStream) {
+    public init?(fromInputStream inputStream: InputStream) {
+        self.init()
         defer { inputStream.close() }
-        self.init(inputStream: inputStream)
+        inputStream.open()
+        let sz   = (1024 * 1024)
+        let buff = UnsafeMutablePointer<UInt8>.allocate(capacity: sz)
+        defer { buff.deallocate() }
+        var rs = inputStream.read(buff, maxLength: sz)
+        while rs > 0 {
+            append(buff, count: rs)
+            rs = inputStream.read(buff, maxLength: sz)
+        }
+        guard rs == 0 else { return nil }
     }
 }
 

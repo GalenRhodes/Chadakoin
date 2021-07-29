@@ -16,7 +16,6 @@
 
 import Foundation
 import CoreFoundation
-import Rubicon
 
 enum StreamError: Error {
     case UnknownError(description: String = "Unknown I/O Error.")

@@ -15,7 +15,6 @@
  *//*****************************************************************************************************************************/
 
 import XCTest
-import Rubicon
 import Foundation
 import CoreFoundation
 @testable import Chadakoin
