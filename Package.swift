@@ -8,7 +8,7 @@ let package = Package(
     name: "Chadakoin",
     platforms: [ .macOS(.v10_15), .tvOS(.v13), .iOS(.v13), .watchOS(.v6), ],
     products: [ .library(name: "Chadakoin", targets: [ "Chadakoin", ]), ],
-    dependencies: [ .package(name: "Rubicon", url: "https://github.com/GalenRhodes/Rubicon", .upToNextMinor(from: "0.2.54")), ],
+    dependencies: [],
     targets: [
         .target(name: "Chadakoin", dependencies: [ "Rubicon", ], exclude: [ "Info.plist", ]),
         .testTarget(name: "ChadakoinTests", dependencies: [ "Chadakoin", ], exclude: [ "Info.plist", ]),
