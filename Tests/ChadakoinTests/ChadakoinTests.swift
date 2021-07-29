@@ -40,6 +40,29 @@ class ChadakoinTests: XCTestCase {
         }
     }
 
+    func testPropertiesFetch() throws {
+        let urls: [String] = [ "https://www.w3.org/2001/XMLSchema.xsd" ]
+
+        for strUrl in urls {
+            do {
+                guard let url = URL(string: strUrl) else { throw URLISErrors.General(description: "Malformed URL.") }
+                let inputStream = try InputStream.getInputStream(url: url)
+                inputStream.open()
+                defer { inputStream.close() }
+
+                print("      Cookies: \(inputStream.property(forKey: .httpCookiesKey) ?? "")")
+                print("      Headers: \(inputStream.property(forKey: .httpHeadersKey) ?? "")")
+                print("  Status Code: \(inputStream.property(forKey: .httpStatusCodeKey) ?? "")")
+                print("  Status Text: \(inputStream.property(forKey: .httpStatusTextKey) ?? "")")
+                print("    MIME Type: \(inputStream.property(forKey: .mimeTypeKey) ?? "")")
+                print("Text Encoding: \(inputStream.property(forKey: .textEncodingNameKey) ?? "")")
+            }
+            catch let e {
+                XCTFail("\(e)")
+            }
+        }
+    }
+
     func test001() throws {
         let urls: [String] = [ "https://www.w3.org/2001/XMLSchema.xsd" ]
 
@@ -47,6 +70,15 @@ class ChadakoinTests: XCTestCase {
             do {
                 guard let url = URL(string: strUrl) else { throw URLISErrors.General(description: "Malformed URL.") }
                 let inputStream = try InputStream.getInputStream(url: url)
+
+                print("      Cookies: \(inputStream.property(forKey: .httpCookiesKey) ?? "")")
+                print("      Headers: \(inputStream.property(forKey: .httpHeadersKey) ?? "")")
+                print("  Status Code: \(inputStream.property(forKey: .httpStatusCodeKey) ?? "")")
+                print("  Status Text: \(inputStream.property(forKey: .httpStatusTextKey) ?? "")")
+                print("    MIME Type: \(inputStream.property(forKey: .mimeTypeKey) ?? "")")
+                print("Text Encoding: \(inputStream.property(forKey: .textEncodingNameKey) ?? "")")
+                print("")
+
                 guard let str = String(fromInputStream: inputStream, encoding: .utf8) else { throw StreamError.UnknownError(description: "Could not read data.") }
                 print(str)
             }

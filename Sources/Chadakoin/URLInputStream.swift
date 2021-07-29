@@ -91,7 +91,14 @@ class URLInputStream: InputStream {
         }
     }
 
-    override func property(forKey key: PropertyKey) -> Any? { (properties[key] ?? super.property(forKey: key)) }
+    override func property(forKey key: PropertyKey) -> Any? {
+        switch key {
+            case .textEncodingNameKey, .mimeTypeKey, .httpStatusCodeKey, .httpStatusTextKey, .httpHeadersKey, .httpCookiesKey:
+                return properties[key]
+            default:
+                return super.property(forKey: key)
+        }
+    }
 
     private var  uuid: String = UUID().uuidString
     override var hash: Int { uuid.hashValue }

@@ -28,7 +28,7 @@
             </BuildableReference>
             <SelectedTests>
                <Test
-                  Identifier = "ChadakoinTests/test001">
+                  Identifier = "ChadakoinTests/testPropertiesFetch">
                </Test>
             </SelectedTests>
          </TestableReference>
